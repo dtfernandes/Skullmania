@@ -18,9 +18,9 @@ MonoBehaviour:
   uiBounds:
     serializedVersion: 2
     x: 941
-    y: -341
+    y: -340
     width: 1855
-    height: 2131
+    height: 2130
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1644,7 +1644,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children:
   - {fileID: 8926484042661614630}
-  m_UIPosition: {x: 1762, y: -341}
+  m_UIPosition: {x: 1761, y: -340}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -2676,7 +2676,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"x":1.0,"y":12.760000228881836,"z":1.0}'
+      m_SerializableObject: '{"x":13.050000190734864,"y":82.5999984741211,"z":1.0}'
     m_Space: 2147483647
   m_Property:
     name: A
@@ -3136,7 +3136,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.TArcSphere, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"sphere":{"transform":{"position":{"x":0.0,"y":0.0,"z":0.0},"angles":{"x":0.0,"y":0.0,"z":0.0},"scale":{"x":1.2474875450134278,"y":1.2474875450134278,"z":1.2474875450134278}},"radius":1.5375089645385743},"arc":6.2831854820251469}'
+      m_SerializableObject: '{"sphere":{"transform":{"position":{"x":0.0,"y":0.0,"z":0.0},"angles":{"x":0.0,"y":0.0,"z":0.0},"scale":{"x":1.2474875450134278,"y":1.2474875450134278,"z":1.2474875450134278}},"radius":0.9374169111251831},"arc":6.2831854820251469}'
     m_Space: 0
   m_Property:
     name: arcSphere
@@ -3768,7 +3768,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 3
+      m_SerializableObject: 8
     m_Space: 2147483647
   m_Property:
     name: Rate
@@ -6197,7 +6197,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"vector":{"x":-5.599999904632568,"y":-4.300000190734863,"z":2.0}}'
+      m_SerializableObject: '{"vector":{"x":-5.599999904632568,"y":-1.0,"z":2.0}}'
     m_Space: 0
   m_Property:
     name: A
@@ -6367,7 +6367,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"vector":{"x":-6.349999904632568,"y":2.0,"z":-2.0}}'
+      m_SerializableObject: '{"vector":{"x":-6.349999904632568,"y":1.0,"z":-2.0}}'
     m_Space: 1
   m_Property:
     name: B
@@ -6566,7 +6566,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"x":7.0,"y":7.0,"z":1.0}'
+      m_SerializableObject: '{"x":5.0,"y":5.0,"z":5.0}'
     m_Space: 2147483647
   m_Property:
     name: Scale
