@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/FadeTest.unity
+    guid: 47c6065b08db82a4bb9ff06055c4ae6f
   - enabled: 1
     path: Assets/Scenes/Skulltest.unity
     guid: 00b9cb1ae6c8d2b41aed99eb89a603de
