@@ -16,16 +16,17 @@ public class Skull : MonoBehaviour
     {
         if (player != null)
         {
-            Vector3 direction = (player.transform.position - transform.position).normalized;
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position + new Vector3(0,1,0), 0.5f);
 
-            transform.position += direction * speed * Time.deltaTime;
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Skull");
         if (other.CompareTag("Kill"))
         {
+            Debug.Log("What are teh rules");
             Destroy(gameObject);
         }
     }
