@@ -19,7 +19,7 @@ public class FadeEffect : MonoBehaviour
     public void FadeIn(Action onComplete = null)
     {
         _fadeCompleteCallback = onComplete;
-
+        _fadeCompleteCallback += BeepBoopFadeOut;
         StartCoroutine(DoFadeIn());
     }
     #endregion
@@ -40,6 +40,12 @@ public class FadeEffect : MonoBehaviour
         }
 
         _fadeCompleteCallback?.Invoke();
+    }
+
+
+    private void BeepBoopFadeOut()
+    {
+        Destroy(gameObject);
     }
     #endregion
 }

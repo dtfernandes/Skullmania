@@ -8,4 +8,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/Skulltest.unity
+    guid: 00b9cb1ae6c8d2b41aed99eb89a603de
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 4ddc98fec2a5f834fb288ff0ea9115d3,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: ae9cd9b39bf0c6743a8ab3c533c00f80,
+      type: 2}

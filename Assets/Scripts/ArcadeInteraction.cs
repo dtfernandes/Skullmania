@@ -11,15 +11,16 @@ public class ArcadeInteraction : MonoBehaviour
     [Header("Config")]
     [SerializeField] private string _sceneToSwitch;
 
-    private GameObject _fadeEffect;
+    [SerializeField]
+    private FadeEffect _fadeEffect;
     #endregion
 
     #region PublicMethods
     public void ActivateArcade()
     {
-        _fadeEffect = Instantiate(_fadeEffectPrefab, Vector3.zero, Quaternion.identity);
+        //_fadeEffect = Instantiate(_fadeEffectPrefab, Vector3.zero, Quaternion.identity);
 
-        FadeEffect fade = _fadeEffect.GetComponent<FadeEffect>();
+        FadeEffect fade = _fadeEffect;
         fade.FadeIn(() =>
         {
             StartCoroutine(LoadNewScene());
