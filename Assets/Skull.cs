@@ -16,7 +16,10 @@ public class Skull : MonoBehaviour
     {
         if (player != null)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position + new Vector3(0,1,0), 0.5f);
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position + new Vector3(0,1,0), speed);
+            transform.LookAt(-player.transform.position);
+            //transform.eulerAngles += new Vector3(0, 100, 0);
+
 
         }
     }
@@ -26,7 +29,7 @@ public class Skull : MonoBehaviour
         Debug.Log("Skull");
         if (other.CompareTag("Kill"))
         {
-            Debug.Log("What are teh rules");
+            Debug.Log("What are teh lel rules");
             Destroy(gameObject);
         }
     }

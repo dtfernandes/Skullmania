@@ -37,7 +37,7 @@ public class Spawner : MonoBehaviour
 
     private void SpawnSkull(Vector3 spawnPosition)
     {
-        GameObject skull = Instantiate(skullPrefab, spawnPosition, Quaternion.identity);
+        GameObject skull = Instantiate(skullPrefab, spawnPosition, skullPrefab.transform.rotation);
 
     }
 
