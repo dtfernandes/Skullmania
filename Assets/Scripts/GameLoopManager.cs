@@ -5,12 +5,14 @@ public class GameLoopManager : MonoBehaviour
 {
     #region Variables
     [SerializeField] private GameConfig_SO _gameConfig;
+    [SerializeField] private GameObject[] _endGameUI;
 
     private float _currentTime;
     private float _endTime;
     private bool _started;
 
     public UnityEvent OnEndGame;
+    public UnityEvent OnRestart;
     #endregion
 
     #region UnityMethods
@@ -27,7 +29,7 @@ public class GameLoopManager : MonoBehaviour
         {
             _currentTime += Time.deltaTime;
             if (_currentTime >= _endTime)
-                EndGame();
+                WinGame();
         }
     }
     #endregion
@@ -40,16 +42,25 @@ public class GameLoopManager : MonoBehaviour
 
     public void GameOver()
     {
-        //Display UI to restart or main menu
+        OnEndGame?.Invoke();
+        _endGameUI[1].SetActive(true);
+    }
+
+    public void Restart()
+    {
+        _currentTime = 0.0f;
+        _endGameUI[0].SetActive(false);
+        _endGameUI[1].SetActive(false);
+        OnRestart?.Invoke();
     }
     #endregion
 
     #region PrivateMethods
-    private void EndGame()
+    private void WinGame()
     {
         OnEndGame?.Invoke();
         //Record that finished the game on player prefs
-        //UI that finished the game and go back to main menu
+        _endGameUI[0].SetActive(true);
     }
     #endregion
 }
