@@ -5,7 +5,7 @@ public class GameLoopManager : MonoBehaviour
 {
     #region Variables
     [SerializeField] private GameConfig_SO _gameConfig;
-    [SerializeField] private GameObject[] _endGameUI;
+    [SerializeField] private EndGameUI _endGameUI;
     [SerializeField] private GameTypeEnum _gameType;
 
     private float _currentTime;
@@ -44,14 +44,13 @@ public class GameLoopManager : MonoBehaviour
     public void GameOver()
     {
         OnEndGame?.Invoke();
-        _endGameUI[1].SetActive(true);
+        _endGameUI.Activate(false);
     }
 
     public void Restart()
     {
         _currentTime = 0.0f;
-        _endGameUI[0].SetActive(false);
-        _endGameUI[1].SetActive(false);
+        _endGameUI.Deactivate();
         OnRestart?.Invoke();
     }
     #endregion
@@ -63,7 +62,7 @@ public class GameLoopManager : MonoBehaviour
         PlayerPrefs.SetInt(_gameType == GameTypeEnum.Sword ?
                             "Sword" : _gameType == GameTypeEnum.Shield ?
                             "Shield" : "Magic", 1);
-        _endGameUI[0].SetActive(true);
+        _endGameUI.Activate(true);
     }
     #endregion
 }
