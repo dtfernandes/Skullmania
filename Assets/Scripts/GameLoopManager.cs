@@ -6,6 +6,7 @@ public class GameLoopManager : MonoBehaviour
     #region Variables
     [SerializeField] private GameConfig_SO _gameConfig;
     [SerializeField] private GameObject[] _endGameUI;
+    [SerializeField] private GameTypeEnum _gameType;
 
     private float _currentTime;
     private float _endTime;
@@ -59,7 +60,9 @@ public class GameLoopManager : MonoBehaviour
     private void WinGame()
     {
         OnEndGame?.Invoke();
-        //Record that finished the game on player prefs
+        PlayerPrefs.SetInt(_gameType == GameTypeEnum.Sword ?
+                            "Sword" : _gameType == GameTypeEnum.Shield ?
+                            "Shield" : "Magic", 1);
         _endGameUI[0].SetActive(true);
     }
     #endregion
