@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d5c67f8727cc2746b822dbb4c256c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameConfig: {fileID: 0}
-  _endGameUI: []
+  _gameConfig: {fileID: 11400000, guid: 0207b03e1db4556429e38c8de48f2fdc, type: 2}
+  _endGameUI: {fileID: 0}
   _gameType: 0
   OnEndGame:
     m_PersistentCalls:

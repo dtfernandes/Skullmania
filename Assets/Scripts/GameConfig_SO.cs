@@ -7,6 +7,11 @@ public class GameConfig_SO : ScriptableObject
 {
     [Header("seconds")]
     [SerializeField] private float _gameSurvivalTime;
+    [Header("Game texts")]
+    [TextArea][SerializeField] private string _winMessage;
+    [TextArea][SerializeField] private string _looseMessage;
 
     public float SurvivalTime => _gameSurvivalTime;
+    public string WinMessage => _winMessage;
+    public string LooseMessage => _looseMessage;
 }
