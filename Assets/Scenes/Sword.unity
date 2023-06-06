@@ -335,7 +335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 918a5c744e8b6439b88f120cb2019913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skullPrefab: {fileID: 6442063389908741566, guid: c7f24582b5b582a4aa0830cc60143ffa,
+  _gameLoop: {fileID: 2348410530313423925}
+  skullPrefab: {fileID: 3702461335895882874, guid: 208865e9f7979b94395bed3ba60895d5,
     type: 3}
   spawnAreaSize: {x: 26.26, y: 14.91, z: 0}
   spawnInterval: 1
@@ -907,10 +908,52 @@ PrefabInstance:
     - target: {fileID: 6996932629589392183, guid: e7a17afa06e60024e82a3e9a1b2d3c22,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7979055556135306834, guid: e7a17afa06e60024e82a3e9a1b2d3c22,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2348410530313423925}
+    - target: {fileID: 7979055556135306834, guid: e7a17afa06e60024e82a3e9a1b2d3c22,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7979055556135306834, guid: e7a17afa06e60024e82a3e9a1b2d3c22,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameLoopManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165084196715936380, guid: e7a17afa06e60024e82a3e9a1b2d3c22,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2348410530313423925}
+    - target: {fileID: 9165084196715936380, guid: e7a17afa06e60024e82a3e9a1b2d3c22,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 9165084196715936380, guid: e7a17afa06e60024e82a3e9a1b2d3c22,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameLoopManager, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7a17afa06e60024e82a3e9a1b2d3c22, type: 3}
+--- !u!114 &1853603771737451625 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1853603772641624153, guid: e7a17afa06e60024e82a3e9a1b2d3c22,
+    type: 3}
+  m_PrefabInstance: {fileID: 1853603771737451624}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 196e5f1f55e4c3e47bb544ef401f421b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2348410530313423924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -927,7 +970,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _endGameUI
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1853603771737451625}
     - target: {fileID: 1015879241882924622, guid: df59aee9d16340e4db401eaaabec55f0,
         type: 3}
       propertyPath: m_RootOrder
@@ -985,3 +1028,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df59aee9d16340e4db401eaaabec55f0, type: 3}
+--- !u!114 &2348410530313423925 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1015879241882924617, guid: df59aee9d16340e4db401eaaabec55f0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2348410530313423924}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d5c67f8727cc2746b822dbb4c256c55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

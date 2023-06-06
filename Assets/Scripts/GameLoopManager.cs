@@ -1,5 +1,6 @@
 using UnityEngine.Events;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameLoopManager : MonoBehaviour
 {
@@ -8,8 +9,8 @@ public class GameLoopManager : MonoBehaviour
     [SerializeField] private EndGameUI _endGameUI;
     [SerializeField] private GameTypeEnum _gameType;
 
-    private float _currentTime;
-    private float _endTime;
+    public float _currentTime;
+    public float _endTime;
     private bool _started;
 
     public UnityEvent OnEndGame;
@@ -21,7 +22,7 @@ public class GameLoopManager : MonoBehaviour
     {
         _endTime = _gameConfig.SurvivalTime;
         _currentTime = 0.0f;
-        _started = false;
+        _started = true;
     }
 
     private void Update()
@@ -52,6 +53,11 @@ public class GameLoopManager : MonoBehaviour
         _currentTime = 0.0f;
         _endGameUI.Deactivate();
         OnRestart?.Invoke();
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Lobby");
     }
     #endregion
 

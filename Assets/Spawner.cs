@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-
+    [SerializeField] private GameLoopManager _gameLoop;
     [SerializeField]
     private GameObject skullPrefab;
     [SerializeField]
@@ -12,9 +12,17 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     private float spawnInterval = 2f;
     private float timer = 0f;
+    private bool _paused;
 
+    private void Start()
+    {
+        _gameLoop.OnEndGame.AddListener(EndSpawn);
+        _gameLoop.OnRestart.AddListener(StartSpawn);
+    }
     private void Update()
     {
+        if (_paused)
+            return;
         timer += Time.deltaTime;
 
         if (timer >= spawnInterval)
@@ -23,6 +31,15 @@ public class Spawner : MonoBehaviour
 
             timer = 0f;
         }
+    }
+
+    public void StartSpawn()
+    {
+        _paused = false;
+    }
+    public void EndSpawn()
+    {
+        _paused = true;
     }
 
     private Vector3 RandomPointInSpawnArea()

@@ -634,8 +634,8 @@ GameObject:
   - component: {fileID: 7314626157468481697}
   - component: {fileID: 4784567685174299755}
   - component: {fileID: 8241715576488985002}
-  - component: {fileID: 5881466044032404403}
   - component: {fileID: 8106300101461796978}
+  - component: {fileID: 800864628645423760}
   m_Layer: 0
   m_Name: skull_Low
   m_TagString: Untagged
@@ -729,20 +729,6 @@ MonoBehaviour:
   speed: 0.1
   sound: {fileID: 8026815708338565729}
   beep: {fileID: 1964908172662105919}
---- !u!64 &5881466044032404403
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6442063389908741566}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4493585093827132993, guid: 8cc545f26cbd1f245a0c5eca1bacbb75, type: 3}
 --- !u!54 &8106300101461796978
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -759,6 +745,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!135 &800864628645423760
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6442063389908741566}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.011892109
+  m_Center: {x: 0.00060423475, y: 0.0010625595, z: -0.0020480482}
 --- !u!1 &7403818296316806367
 GameObject:
   m_ObjectHideFlags: 0

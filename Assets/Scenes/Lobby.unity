@@ -1615,6 +1615,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 577096278}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &579288114 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 33a097dd25b475d49b9a9ba1e63ff021,
+    type: 3}
+  m_PrefabInstance: {fileID: 1808869353}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &579288118
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579288114}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.048821982, y: 0.24961042, z: 0.68792975}
+  m_Center: {x: -0.0000000038222456, y: 0.000000026658764, z: 0.25650644}
 --- !u!1001 &582630352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2303,7 +2322,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 847244039}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.048821952, y: 0.24961033, z: 0.6879298}
@@ -6340,6 +6359,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sword_Low
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 33a097dd25b475d49b9a9ba1e63ff021,
+        type: 3}
+      propertyPath: m_TagString
+      value: Kill
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33a097dd25b475d49b9a9ba1e63ff021, type: 3}

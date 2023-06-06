@@ -14,10 +14,16 @@ public class Skull : MonoBehaviour
 
     private MeshRenderer mesh;
 
+    [SerializeField]
+    private Animator left, right;
+
+    private Rigidbody rigi;
+
     private void Start()
     {
         mesh = GetComponent<MeshRenderer>();
         player = GameObject.FindGameObjectWithTag("Player");
+        rigi = GetComponent<Rigidbody>();
     }
 
     private void Update()
@@ -34,14 +40,17 @@ public class Skull : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Skull");
         if (other.CompareTag("Kill"))
         {
             Debug.Log("What are teh lel rules");
             sound.Play();
             StartCoroutine("Kill");
+            player = null;
+            rigi.useGravity = true;
             mesh.enabled = false;
             Destroy(beep);
+            left.enabled = true;
+            right.enabled = true;
         }
     }
 
