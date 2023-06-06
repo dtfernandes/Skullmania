@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51fc194e7b0c0dc49aabd7f0f9581741, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
-  _gameSurvivalTime: 10
-  _winMessage: WInnn
+  _gameSurvivalTime: 30
+  _winMessage: You Won!!!
   _looseMessage: Looose

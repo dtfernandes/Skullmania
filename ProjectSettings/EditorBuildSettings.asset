@@ -6,14 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/FadeTest.unity
-    guid: 47c6065b08db82a4bb9ff06055c4ae6f
-  - enabled: 1
-    path: Assets/Scenes/Skulltest.unity
-    guid: 00b9cb1ae6c8d2b41aed99eb89a603de
+    path: Assets/Scenes/Lobby.unity
+    guid: a79da9b122a9f3540ade21efef5df80e
   - enabled: 1
     path: Assets/Scenes/Sword.unity
     guid: 27d7809947f8a048c8b847198ec6ef59
+  - enabled: 0
+    path: Assets/Scenes/FadeTest.unity
+    guid: 47c6065b08db82a4bb9ff06055c4ae6f
+  - enabled: 0
+    path: Assets/Scenes/Skulltest.unity
+    guid: 00b9cb1ae6c8d2b41aed99eb89a603de
+  - enabled: 1
+    path: Assets/Scenes/Lobby 1.unity
+    guid: d2c2fedb8c14f224c96285956a0eb956
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 4ddc98fec2a5f834fb288ff0ea9115d3,
       type: 2}

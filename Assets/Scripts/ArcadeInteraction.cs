@@ -42,8 +42,20 @@ public class ArcadeInteraction : MonoBehaviour
     }
     #endregion
 
+    private void Start()
+    {
+        
+    }
+
+
     private void Update()
     {
+        if (_fadeEffect == null)
+        {
+             Debug.Log("Beep");
+            _fadeEffect = GameObject.FindObjectOfType<FadeEffect>();
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
             ActivateArcade();
     }

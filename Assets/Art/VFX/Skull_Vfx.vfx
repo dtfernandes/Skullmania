@@ -4125,7 +4125,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"353d41b6132e92c4e882bebfb6f95197","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"0c674145edf11024e8e78d806435a520","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: mainTexture
@@ -4554,7 +4554,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"x":25.600000381469728,"y":3.7647058963775636,"z":0.6274510025978088}'
+      m_SerializableObject: '{"x":25.600000381469728,"y":2.67718768119812,"z":0.6701568961143494}'
     m_Space: 2147483647
   m_Property:
     name: Color
@@ -5849,7 +5849,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"x":5.0,"y":5.0,"z":5.0}'
+      m_SerializableObject: '{"x":3.0,"y":3.0,"z":3.0}'
     m_Space: 2147483647
   m_Property:
     name: Scale

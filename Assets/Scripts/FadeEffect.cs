@@ -45,7 +45,8 @@ public class FadeEffect : MonoBehaviour
 
     private void BeepBoopFadeOut()
     {
-        Destroy(gameObject);
+        StopCoroutine(DoFadeIn());
+        _fadeImage.color = new Color(_fadeColor.r, _fadeColor.g, _fadeColor.b, 0);
     }
     #endregion
 }
