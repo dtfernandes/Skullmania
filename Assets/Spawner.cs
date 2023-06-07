@@ -6,7 +6,7 @@ public class Spawner : MonoBehaviour
 {
     [SerializeField] private GameLoopManager _gameLoop;
     [SerializeField]
-    private GameObject skullPrefab;
+    private Skull skullPrefab;
     [SerializeField]
     private Vector3 spawnAreaSize;
     [SerializeField]
@@ -14,8 +14,11 @@ public class Spawner : MonoBehaviour
     private float timer = 0f;
     private bool _paused;
 
+    private List<Skull> skullList;
+
     private void Start()
     {
+        skullList = new List<Skull>(); 
         _gameLoop.OnEndGame.AddListener(EndSpawn);
         _gameLoop.OnRestart.AddListener(StartSpawn);
     }
@@ -54,13 +57,23 @@ public class Spawner : MonoBehaviour
 
     private void SpawnSkull(Vector3 spawnPosition)
     {
-        GameObject skull = Instantiate(skullPrefab, spawnPosition, skullPrefab.transform.rotation);
-
+        Skull skull = Instantiate(skullPrefab, spawnPosition, skullPrefab.transform.rotation);
+        skull.onDie += () => { skullList.Remove(skull); };
+        skullList.Add(skull);
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(transform.position, spawnAreaSize);
+    }
+
+    public void Stop()
+    {
+        _paused = true;
+        foreach(Skull g in skullList)
+        {
+            Destroy(g.gameObject);
+        }
     }
 }

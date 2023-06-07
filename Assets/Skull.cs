@@ -21,6 +21,8 @@ public class Skull : MonoBehaviour
     bool foundTarget = false;
     Vector3 targetPoint;
 
+    public System.Action onDie;
+
     private void Start()
     {
         mesh = GetComponent<MeshRenderer>();
@@ -34,9 +36,6 @@ public class Skull : MonoBehaviour
         float randY = Random.Range(target.transform.position.y - target.Height / 2, target.transform.position.y + target.Height / 2);
 
         Vector3 returnPoint = new Vector3(randX, randY, target.transform.position.z);
-
-        Debug.Log("Beep: " + returnPoint);
-
         return returnPoint;
     }
 
@@ -76,6 +75,7 @@ public class Skull : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Destroy(gameObject);
         Destroy(sound);
+        onDie?.Invoke();
     }
 }
 
