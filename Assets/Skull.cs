@@ -6,7 +6,7 @@ using UnityEngine;
 public class Skull : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
-    private GameObject player;
+    private Target target;
     [SerializeField]
     private AudioSource sound;
     [SerializeField]
@@ -18,23 +18,40 @@ public class Skull : MonoBehaviour
     private Animator left, right;
 
     private Rigidbody rigi;
+    bool foundTarget = false;
+    Vector3 targetPoint;
 
     private void Start()
     {
         mesh = GetComponent<MeshRenderer>();
-        player = GameObject.FindGameObjectWithTag("Player");
+        target = GameObject.FindObjectOfType<Target>();
         rigi = GetComponent<Rigidbody>();
+    }
+
+    public Vector3 FindRandomPoint()
+    {
+        float randX = Random.Range(target.transform.position.x - target.Width / 2, target.transform.position.x + target.Width / 2);
+        float randY = Random.Range(target.transform.position.y - target.Height / 2, target.transform.position.y + target.Height / 2);
+
+        Vector3 returnPoint = new Vector3(randX, randY, target.transform.position.z);
+
+        Debug.Log("Beep: " + returnPoint);
+
+        return returnPoint;
     }
 
     private void Update()
     {
-        if (player != null)
+        if(!foundTarget && target != null)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position + new Vector3(0,1,0), speed);
-            //
+            //Define point
+            targetPoint = FindRandomPoint();
+            foundTarget = true;
+        }
 
-            //transform.LookAt(-player.transform.position); 
-            //transform.eulerAngles += new Vector3(0, 100, 0);
+        if (target != null)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetPoint, speed);        
         }
     }
 
@@ -45,7 +62,7 @@ public class Skull : MonoBehaviour
             Debug.Log("What are teh lel rules");
             sound.Play();
             StartCoroutine("Kill");
-            player = null;
+            target = null;
             rigi.useGravity = true;
             mesh.enabled = false;
             Destroy(beep);
