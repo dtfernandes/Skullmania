@@ -2182,6 +2182,7 @@ MonoBehaviour:
   _fadeEffectPrefab: {fileID: 1237487604}
   _sceneToSwitch: Sword
   _fadeEffect: {fileID: 423567815}
+  debugButton: 259
 --- !u!4 &425515429
 Transform:
   m_ObjectHideFlags: 0
@@ -3061,12 +3062,12 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 9014170783455454785}
+    m_TransformParent: {fileID: 1126241411}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 33a097dd25b475d49b9a9ba1e63ff021,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33a097dd25b475d49b9a9ba1e63ff021,
         type: 3}
@@ -3091,12 +3092,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 33a097dd25b475d49b9a9ba1e63ff021,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.001
+      value: -0.0010001659
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33a097dd25b475d49b9a9ba1e63ff021,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.01
+      value: -0.00999999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33a097dd25b475d49b9a9ba1e63ff021,
         type: 3}
@@ -3111,12 +3112,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 33a097dd25b475d49b9a9ba1e63ff021,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33a097dd25b475d49b9a9ba1e63ff021,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33a097dd25b475d49b9a9ba1e63ff021,
         type: 3}
@@ -3675,6 +3676,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2019631960}
         m_TargetAssemblyTypeName: ArcadeInteraction, Assembly-CSharp
         m_MethodName: ActivateArcade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1126241412}
+        m_TargetAssemblyTypeName: WeaponSelector, Assembly-CSharp
+        m_MethodName: SelectShield
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6495,6 +6508,56 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1118732565}
   m_Mesh: {fileID: -211007548206913942, guid: 5c41cbea5af50a44ea55ad5b8c63ec22, type: 3}
+--- !u!1 &1126241410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1126241411}
+  - component: {fileID: 1126241412}
+  m_Layer: 0
+  m_Name: Weapon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1126241411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126241410}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 577096279}
+  - {fileID: 1883224239}
+  - {fileID: 1427023564}
+  m_Father: {fileID: 9014170783455454785}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1126241412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1126241410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32d33e6d5cc9b549aedb107fc3b86af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sword: {fileID: 847244039}
+  _staff: {fileID: 1427023563}
+  _shield: {fileID: 1605480845}
 --- !u!1001 &1132427049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7196,6 +7259,18 @@ MonoBehaviour:
       - m_Target: {fileID: 425515428}
         m_TargetAssemblyTypeName: ArcadeInteraction, Assembly-CSharp
         m_MethodName: ActivateArcade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1126241412}
+        m_TargetAssemblyTypeName: WeaponSelector, Assembly-CSharp
+        m_MethodName: SelectSword
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8612,12 +8687,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1427023563}
   m_LocalRotation: {x: -0.10067683, y: -0.53198993, z: -0.26415825, w: -0.79816747}
-  m_LocalPosition: {x: 0.017, y: 0.028, z: 0.013}
-  m_LocalScale: {x: 0.033780005, y: 0.036940012, z: 0.033780005}
+  m_LocalPosition: {x: 0.017, y: 0.027999878, z: 0.013000011}
+  m_LocalScale: {x: 0.03378001, y: 0.036940012, z: 0.03378001}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 9014170783455454785}
-  m_RootOrder: 6
+  m_Father: {fileID: 1126241411}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -6.912, y: 425.372, z: 32.186}
 --- !u!1 &1428951353
 GameObject:
@@ -9932,27 +10007,27 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 9014170783455454785}
+    m_TransformParent: {fileID: 1126241411}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c0cee6cab03fda348bd3eb00abef831f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0cee6cab03fda348bd3eb00abef831f,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.23999996
+      value: 0.23999995
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0cee6cab03fda348bd3eb00abef831f,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.24000005
+      value: 0.23999996
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0cee6cab03fda348bd3eb00abef831f,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.24000002
+      value: 0.23999998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0cee6cab03fda348bd3eb00abef831f,
         type: 3}
@@ -9962,32 +10037,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c0cee6cab03fda348bd3eb00abef831f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.014839631
+      value: -0.014839649
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0cee6cab03fda348bd3eb00abef831f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.039425008
+      value: -0.039424896
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0cee6cab03fda348bd3eb00abef831f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6264654
+      value: 0.62646544
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0cee6cab03fda348bd3eb00abef831f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.76950675
+      value: 0.7695068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0cee6cab03fda348bd3eb00abef831f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.08218476
+      value: 0.08218477
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0cee6cab03fda348bd3eb00abef831f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.09298446
+      value: 0.09298447
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0cee6cab03fda348bd3eb00abef831f,
         type: 3}
@@ -10023,6 +10098,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: shield
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c0cee6cab03fda348bd3eb00abef831f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9219995597017074360, guid: c0cee6cab03fda348bd3eb00abef831f,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10030,6 +10110,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c1e031457b913f741b1631486f766039, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0cee6cab03fda348bd3eb00abef831f, type: 3}
+--- !u!1 &1605480845 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c0cee6cab03fda348bd3eb00abef831f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1605480844}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1611487010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11359,8 +11445,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fadeEffectPrefab: {fileID: 1237487604}
-  _sceneToSwitch: Sword
+  _sceneToSwitch: Staff
   _fadeEffect: {fileID: 423567815}
+  debugButton: 257
 --- !u!1001 &1805149556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11832,6 +11919,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1801873766}
         m_TargetAssemblyTypeName: ArcadeInteraction, Assembly-CSharp
         m_MethodName: ActivateArcade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1126241412}
+        m_TargetAssemblyTypeName: WeaponSelector, Assembly-CSharp
+        m_MethodName: SelectStaff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12403,8 +12502,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fadeEffectPrefab: {fileID: 1237487604}
-  _sceneToSwitch: Sword
+  _sceneToSwitch: Shield
   _fadeEffect: {fileID: 423567815}
+  debugButton: 258
 --- !u!4 &2019631961
 Transform:
   m_ObjectHideFlags: 0
@@ -15694,9 +15794,7 @@ Transform:
   - {fileID: 8223754799856364587}
   - {fileID: 5436722515641925795}
   - {fileID: 6694496370855505580}
-  - {fileID: 577096279}
-  - {fileID: 1883224239}
-  - {fileID: 1427023564}
+  - {fileID: 1126241411}
   m_Father: {fileID: 9014170783432661731}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
