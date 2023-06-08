@@ -42,6 +42,10 @@ public class ArcadeInteraction : MonoBehaviour
     }
     #endregion
 
+
+    [SerializeField]
+    private KeyCode debugButton;
+
     private void Start()
     {
         
@@ -56,7 +60,10 @@ public class ArcadeInteraction : MonoBehaviour
             _fadeEffect = GameObject.FindObjectOfType<FadeEffect>();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(debugButton)) 
+        {
             ActivateArcade();
+
+        }
     }
 }
