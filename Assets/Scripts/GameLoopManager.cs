@@ -30,6 +30,11 @@ public class GameLoopManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+            WinGame();
+        if (Input.GetKeyDown(KeyCode.Escape))
+            MainMenu();
+
         if (_started)
         {
             //Separate seconds and milliseconds
@@ -39,7 +44,7 @@ public class GameLoopManager : MonoBehaviour
 
             //Should format time as 00:00 but is not working :c 
             string formattedTime = string.Format("{0:00}:{1:00}", seconds, milliseconds);
-            
+
             //Display timer
             _timerDisplay.text = formattedTime;
 
