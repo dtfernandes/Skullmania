@@ -20,7 +20,8 @@ public class Target : MonoBehaviour
     private GameObject gameOver;
     [SerializeField]
     private Spawner spawner;
-
+    [SerializeField]
+    private GameObject timer;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -40,6 +41,7 @@ public class Target : MonoBehaviour
     {
         gameOver.SetActive(true);
         spawner.Stop();
+        timer.SetActive(false);
     }
 
     private void OnDrawGizmos()

@@ -1014,6 +1014,7 @@ MonoBehaviour:
   - {fileID: 182154736}
   gameOver: {fileID: 1347480157}
   spawner: {fileID: 1388262774}
+  timer: {fileID: 1474167747}
 --- !u!4 &288562745
 Transform:
   m_ObjectHideFlags: 0
@@ -1027,7 +1028,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &288562746
 BoxCollider:
@@ -2147,7 +2148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &725709817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2855,7 +2856,7 @@ Transform:
   - {fileID: 479180304}
   - {fileID: 182154738}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1105402332
 PrefabInstance:
@@ -2872,7 +2873,7 @@ PrefabInstance:
     - target: {fileID: 3574135097097267210, guid: 206e0664b6e67b148a55677db4e3cba9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3574135097097267210, guid: 206e0664b6e67b148a55677db4e3cba9,
         type: 3}
@@ -4306,7 +4307,7 @@ RectTransform:
   m_Children:
   - {fileID: 304542622}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5293,7 +5294,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5508,7 +5509,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187027, guid: 18ddb545287c546e19cc77dc9fbb2189,
         type: 3}
@@ -5564,6 +5565,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: XR Device Simulator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
@@ -6627,7 +6633,7 @@ PrefabInstance:
     - target: {fileID: 1853603772641624154, guid: e7a17afa06e60024e82a3e9a1b2d3c22,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1853603772641624154, guid: e7a17afa06e60024e82a3e9a1b2d3c22,
         type: 3}
@@ -6793,7 +6799,7 @@ PrefabInstance:
     - target: {fileID: 1015879241882924622, guid: df59aee9d16340e4db401eaaabec55f0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1015879241882924622, guid: df59aee9d16340e4db401eaaabec55f0,
         type: 3}
