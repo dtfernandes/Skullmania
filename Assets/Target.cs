@@ -23,12 +23,16 @@ public class Target : MonoBehaviour
     [SerializeField]
     private GameObject timer;
 
+    private Animator heartAnimator;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Skull"))
         {
             livesNumb--;
-            lives[livesNumb].SetActive(false);
+            heartAnimator = lives[livesNumb].GetComponent<Animator>();
+            heartAnimator.SetTrigger("LoseHeart");
+            //lives[livesNumb].SetActive(false);
 
             if(livesNumb == 0)
             {
