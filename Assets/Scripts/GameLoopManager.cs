@@ -1,6 +1,7 @@
 using UnityEngine.Events;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameLoopManager : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class GameLoopManager : MonoBehaviour
     [SerializeField] private GameConfig_SO _gameConfig;
     [SerializeField] private EndGameUI _endGameUI;
     [SerializeField] private GameTypeEnum _gameType;
+
+    [SerializeField] private TextMeshPro _timerDisplay;
 
     public float _currentTime;
     public float _endTime;
@@ -29,6 +32,17 @@ public class GameLoopManager : MonoBehaviour
     {
         if (_started)
         {
+            //Separate seconds and milliseconds
+            float timeDifference = _endTime - _currentTime;
+            int seconds = Mathf.FloorToInt(timeDifference);
+            int milliseconds = Mathf.FloorToInt((timeDifference - seconds) * 1000);
+
+            //Should format time as 00:00 but is not working :c 
+            string formattedTime = string.Format("{0:00}:{1:00}", seconds, milliseconds);
+            
+            //Display timer
+            _timerDisplay.text = formattedTime;
+
             _currentTime += Time.deltaTime;
             if (_currentTime >= _endTime)
                 WinGame();
