@@ -104,7 +104,7 @@ public class GameLoopManager : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("Lobby");
+        SceneManager.LoadScene("Lobby 1");
     }
     #endregion
 

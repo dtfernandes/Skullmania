@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Skull : MonoBehaviour
 {
+
+    [SerializeField]
+    private GameObject expl;
     [SerializeField] private float speed = 5f;
     private Target target;
     [SerializeField]
@@ -58,17 +61,19 @@ public class Skull : MonoBehaviour
     {
         if (other.CompareTag("Kill"))
         {
-            Debug.Log("What are teh lel rules");
             sound.Play();
             StartCoroutine("Kill");
             target = null;
             rigi.useGravity = true;
             mesh.enabled = false;
             Destroy(beep);
+            Instantiate(expl, transform.position, Quaternion.identity);
             left.enabled = true;
             right.enabled = true;
         }
     }
+
+    
 
     IEnumerator Kill()
     {

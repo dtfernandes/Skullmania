@@ -73,14 +73,13 @@ public class SkullSniper : MonoBehaviour
     {
         GameObject projectile = Instantiate(_projectile, transform.position, transform.rotation);
         ProjectileScript projScript = projectile.GetComponent<ProjectileScript>();
-        projScript.AddTarget(player);
+        projScript.AddTarget(player, new Vector3(0,0.4f,0));
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Kill"))
         {
-            Debug.Log("What are teh lel rules");
             sound.Play();
             StartCoroutine("Kill");
             target = null;
