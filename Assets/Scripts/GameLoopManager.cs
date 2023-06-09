@@ -37,6 +37,18 @@ public class GameLoopManager : MonoBehaviour
         _player = GameObject.FindObjectOfType<XROrigin>().gameObject;
         _player.GetComponent<DynamicMoveProvider>().enabled = false;
         _player.transform.position = new Vector3(0.194f, -0.807f, 4.122f);
+        WeaponSelector sel = GameObject.FindObjectOfType<WeaponSelector>();
+        
+        if(_gameType == GameTypeEnum.Sword){
+            sel.SelectSword();
+        }
+        else if(_gameType == GameTypeEnum.Shield){
+            sel.SelectShield();
+        }
+        else if(_gameType == GameTypeEnum.Magic){
+            sel.SelectStaff();
+        }
+
     }
 
     private void Update()
