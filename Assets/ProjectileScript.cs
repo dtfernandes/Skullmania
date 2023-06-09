@@ -10,6 +10,7 @@ public class ProjectileScript : MonoBehaviour
 
     [SerializeField]
     private float _speed;
+    private Vector3 _target;
 
     IEnumerator Die()
     {
@@ -26,5 +27,10 @@ public class ProjectileScript : MonoBehaviour
     void Update()
     {
         transform.position += ShootDir.normalized * Speed * Time.deltaTime;
+    }
+
+    public void AddTarget(GameObject target)
+    {
+        ShootDir = (target.transform.position - transform.position).normalized;
     }
 }

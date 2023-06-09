@@ -14699,7 +14699,7 @@ MonoBehaviour:
   _fadeEffectPrefab: {fileID: 1237487604}
   _sceneToSwitch: Shield
   _fadeEffect: {fileID: 423567815}
-  debugButton: 0
+  debugButton: 274
 --- !u!4 &2019631961
 Transform:
   m_ObjectHideFlags: 0
