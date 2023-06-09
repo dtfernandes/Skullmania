@@ -16,8 +16,8 @@ public class GameLoopManager : MonoBehaviour
     [SerializeField] private TextMeshPro _timerDisplay;
     [SerializeField] private GameObject _player;
 
-    [SerializeField] private GameObject _gameWinText; 
-    [SerializeField] private GameObject _gameLoseText; 
+    [SerializeField] private GameObject _gameWinText;
+    [SerializeField] private GameObject _gameLoseText;
 
     private AudioSource soundEffect;
 
@@ -39,14 +39,17 @@ public class GameLoopManager : MonoBehaviour
         _player.GetComponent<DynamicMoveProvider>().enabled = false;
         _player.transform.position = new Vector3(0.194f, -0.807f, 4.122f);
         WeaponSelector sel = GameObject.FindObjectOfType<WeaponSelector>();
-        
-        if(_gameType == GameTypeEnum.Sword){
+
+        if (_gameType == GameTypeEnum.Sword)
+        {
             sel.SelectSword();
         }
-        else if(_gameType == GameTypeEnum.Shield){
+        else if (_gameType == GameTypeEnum.Shield)
+        {
             sel.SelectShield();
         }
-        else if(_gameType == GameTypeEnum.Staff){
+        else if (_gameType == GameTypeEnum.Staff)
+        {
             sel.SelectStaff();
         }
 
@@ -114,7 +117,7 @@ public class GameLoopManager : MonoBehaviour
     #region PrivateMethods
     public void WinGame()
     {
-        
+        _timerDisplay.enabled = false;
         _spawner.Stop();
         _gameWinText.SetActive(true);
         OnEndGame?.Invoke();
