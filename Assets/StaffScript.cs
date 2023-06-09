@@ -13,10 +13,14 @@ public class StaffScript : MonoBehaviour
 
     private bool inCooldown;
 
+    [SerializeField]
+    private float _speed;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        cooldown = new WaitForSeconds(2);
+        cooldown = new WaitForSeconds(0.5f);
     }
 
     // Update is called once per frame
@@ -32,12 +36,12 @@ public class StaffScript : MonoBehaviour
     {
         if(inCooldown) return;
 
-        Debug.Log("jbjuv");
+
 
         ProjectileScript pS =
             Instantiate(_projectilePREFAB, _pSpawnPoint.transform.position, Quaternion.identity);
         pS.ShootDir = _pTargetPointd.transform.position - _pSpawnPoint.transform.position;
-
+        pS.Speed = _speed;
         StartCoroutine(Cooldown());
         inCooldown = true;
     }

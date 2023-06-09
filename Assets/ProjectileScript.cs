@@ -29,8 +29,8 @@ public class ProjectileScript : MonoBehaviour
         transform.position += ShootDir.normalized * Speed * Time.deltaTime;
     }
 
-    public void AddTarget(GameObject target)
+    public void AddTarget(GameObject target, Vector3 offset)
     {
-        ShootDir = (target.transform.position - transform.position).normalized;
+        ShootDir = (target.transform.position - offset - transform.position).normalized;
     }
 }
