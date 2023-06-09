@@ -23,12 +23,19 @@ public class Target : MonoBehaviour
     [SerializeField]
     private GameObject timer;
 
+    private Animator heartAnimator;
+    private AudioSource soundEffect;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Skull"))
         {
             livesNumb--;
-            lives[livesNumb].SetActive(false);
+            heartAnimator = lives[livesNumb].GetComponent<Animator>();
+            heartAnimator.SetTrigger("LoseHeart");
+            soundEffect = lives[livesNumb].GetComponent<AudioSource>();
+            soundEffect.Play();
+            //lives[livesNumb].SetActive(false);
 
             if(livesNumb == 0)
             {

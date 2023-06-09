@@ -16,7 +16,11 @@ public class Ricochet : MonoBehaviour
             obj = other.gameObject;
 
 
-
+            ProjectileScript pS = obj.GetComponent<ProjectileScript>();
+            if (pS != null)
+            {
+                pS.ShootDir = transform.right;
+            }
         }
     }
 
