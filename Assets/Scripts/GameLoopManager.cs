@@ -2,6 +2,7 @@ using UnityEngine.Events;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using Unity.XR.CoreUtils;
 
 public class GameLoopManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class GameLoopManager : MonoBehaviour
     [SerializeField] private GameTypeEnum _gameType;
     [SerializeField] private Spawner _spawner;
     [SerializeField] private TextMeshPro _timerDisplay;
+    [SerializeField] private GameObject _player;
+
 
     private float _currentTime;
     private float _endTime;
@@ -26,6 +29,8 @@ public class GameLoopManager : MonoBehaviour
         _endTime = _gameConfig.SurvivalTime;
         _currentTime = 0.0f;
         _started = true;
+        _player = GameObject.FindObjectOfType<XROrigin>().gameObject;
+        _player.transform.position = new Vector3(0.194f, -0.807f, 4.122f);
     }
 
     private void Update()

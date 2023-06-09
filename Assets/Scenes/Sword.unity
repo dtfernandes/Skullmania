@@ -2512,7 +2512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &725709817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5932,7 +5932,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
@@ -7165,7 +7165,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2348410530313423925}
+      objectReference: {fileID: 288562744}
     - target: {fileID: 9165084196715936380, guid: e7a17afa06e60024e82a3e9a1b2d3c22,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -7174,7 +7174,7 @@ PrefabInstance:
     - target: {fileID: 9165084196715936380, guid: e7a17afa06e60024e82a3e9a1b2d3c22,
         type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameLoopManager, Assembly-CSharp
+      value: Target, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9165084196715936381, guid: e7a17afa06e60024e82a3e9a1b2d3c22,
         type: 3}
