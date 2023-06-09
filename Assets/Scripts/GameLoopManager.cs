@@ -116,7 +116,7 @@ public class GameLoopManager : MonoBehaviour
         OnEndGame?.Invoke();
         PlayerPrefs.SetInt(_gameType == GameTypeEnum.Sword ?
                             "Sword" : _gameType == GameTypeEnum.Shield ?
-                            "Shield" : "Magic", 1);
+                            "Shield" : "Staff", 1);
         _endGameUI.Activate(true);
         _started = false;
     }

@@ -14,7 +14,7 @@ public class ProjectileScript : MonoBehaviour
 
     IEnumerator Die()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(4);
         Destroy(this.gameObject);
     }
 

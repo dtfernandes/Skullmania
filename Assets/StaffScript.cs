@@ -17,6 +17,11 @@ public class StaffScript : MonoBehaviour
     private float _speed;
 
 
+    private void OnEnable()
+    {
+        inCooldown = false;
+    }
+
     // Start is called before the first frame update
     void Start()
     {

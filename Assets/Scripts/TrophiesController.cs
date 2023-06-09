@@ -7,7 +7,7 @@ public class TrophiesController : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("Shield") == 1)
             _trophies[0].SetActive(true);
-        if (PlayerPrefs.GetInt("Wand") == 1)
+        if (PlayerPrefs.GetInt("Staff") == 1)
             _trophies[1].SetActive(true);
         if (PlayerPrefs.GetInt("Sword") == 1)
             _trophies[2].SetActive(true);
