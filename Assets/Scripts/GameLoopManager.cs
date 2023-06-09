@@ -45,7 +45,7 @@ public class GameLoopManager : MonoBehaviour
         else if(_gameType == GameTypeEnum.Shield){
             sel.SelectShield();
         }
-        else if(_gameType == GameTypeEnum.Magic){
+        else if(_gameType == GameTypeEnum.Staff){
             sel.SelectStaff();
         }
 
