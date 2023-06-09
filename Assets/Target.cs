@@ -24,6 +24,7 @@ public class Target : MonoBehaviour
     private GameObject timer;
 
     private Animator heartAnimator;
+    private AudioSource soundEffect;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -32,6 +33,8 @@ public class Target : MonoBehaviour
             livesNumb--;
             heartAnimator = lives[livesNumb].GetComponent<Animator>();
             heartAnimator.SetTrigger("LoseHeart");
+            soundEffect = lives[livesNumb].GetComponent<AudioSource>();
+            soundEffect.Play();
             //lives[livesNumb].SetActive(false);
 
             if(livesNumb == 0)
