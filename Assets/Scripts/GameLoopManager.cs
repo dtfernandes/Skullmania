@@ -87,7 +87,7 @@ public class GameLoopManager : MonoBehaviour
 
     public void GameOver()
     {
-        soundEffect = _endGameUI.GetComponent<AudioSource>();
+        soundEffect = _gameLoseText.GetComponent<AudioSource>();
         soundEffect.Play();
         OnEndGame?.Invoke();
         _endGameUI.Activate(false);
@@ -112,13 +112,14 @@ public class GameLoopManager : MonoBehaviour
     #endregion
 
     #region PrivateMethods
-    private void WinGame()
+    public void WinGame()
     {
-        soundEffect = _endGameUI.GetComponent<AudioSource>();
-        soundEffect.Play();
+        
         _spawner.Stop();
         _gameWinText.SetActive(true);
         OnEndGame?.Invoke();
+        soundEffect = _gameWinText.GetComponent<AudioSource>();
+        soundEffect.Play();
         PlayerPrefs.SetInt(_gameType == GameTypeEnum.Sword ?
                             "Sword" : _gameType == GameTypeEnum.Shield ?
                             "Shield" : "Staff", 1);
