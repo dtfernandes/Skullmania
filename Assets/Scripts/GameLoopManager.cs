@@ -17,8 +17,9 @@ public class GameLoopManager : MonoBehaviour
     [SerializeField] private GameObject _player;
 
     [SerializeField] private GameObject _gameWinText; 
-     [SerializeField] private GameObject _gameLoseText; 
+    [SerializeField] private GameObject _gameLoseText; 
 
+    private AudioSource soundEffect;
 
     private float _currentTime;
     private float _endTime;
@@ -86,6 +87,8 @@ public class GameLoopManager : MonoBehaviour
 
     public void GameOver()
     {
+        soundEffect = _endGameUI.GetComponent<AudioSource>();
+        soundEffect.Play();
         OnEndGame?.Invoke();
         _endGameUI.Activate(false);
         _gameLoseText.SetActive(true);
@@ -111,6 +114,8 @@ public class GameLoopManager : MonoBehaviour
     #region PrivateMethods
     private void WinGame()
     {
+        soundEffect = _endGameUI.GetComponent<AudioSource>();
+        soundEffect.Play();
         _spawner.Stop();
         _gameWinText.SetActive(true);
         OnEndGame?.Invoke();
