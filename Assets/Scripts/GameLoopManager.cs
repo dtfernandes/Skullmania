@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using Unity.XR.CoreUtils;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 
 public class GameLoopManager : MonoBehaviour
 {
@@ -30,6 +32,7 @@ public class GameLoopManager : MonoBehaviour
         _currentTime = 0.0f;
         _started = true;
         _player = GameObject.FindObjectOfType<XROrigin>().gameObject;
+        _player.GetComponent<DynamicMoveProvider>().enabled = false;
         _player.transform.position = new Vector3(0.194f, -0.807f, 4.122f);
     }
 
