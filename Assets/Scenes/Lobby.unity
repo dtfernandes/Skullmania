@@ -7187,7 +7187,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh242270
+  m_Name: pb_Mesh42204
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10686,6 +10686,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3239272061643454466, guid: bdd5dab273b716345bedbcbed494c9a3,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3239272062016532792, guid: bdd5dab273b716345bedbcbed494c9a3,
         type: 3}
       propertyPath: m_RootOrder
@@ -10745,6 +10750,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trophies
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239272062803503338, guid: bdd5dab273b716345bedbcbed494c9a3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3239272063387069998, guid: bdd5dab273b716345bedbcbed494c9a3,
+        type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdd5dab273b716345bedbcbed494c9a3, type: 3}
