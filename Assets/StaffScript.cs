@@ -31,7 +31,9 @@ public class StaffScript : MonoBehaviour
     public void ShootStaff()
     {
         if(inCooldown) return;
-        
+
+        Debug.Log("jbjuv");
+
         ProjectileScript pS =
             Instantiate(_projectilePREFAB, _pSpawnPoint.transform.position, Quaternion.identity);
         pS.ShootDir = _pTargetPointd.transform.position - _pSpawnPoint.transform.position;

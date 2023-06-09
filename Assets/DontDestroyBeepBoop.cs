@@ -8,16 +8,16 @@ public class DontDestroyBeepBoop : MonoBehaviour
     private static DontDestroyBeepBoop instance;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        if(instance == null|| instance == this)
+        if(instance == null || instance == this )
         {
             instance = this;
             DontDestroyOnLoad(gameObject);        
         }
         else
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 
