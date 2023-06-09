@@ -6,7 +6,12 @@ public class Ricochet : MonoBehaviour
 {
 
     private GameObject obj;
+    private AudioSource audiosource;
 
+    private void Awake(){
+
+        audiosource = GetComponent<AudioSource>();
+    }
     
 
     private void OnTriggerEnter(Collider other)
@@ -14,7 +19,7 @@ public class Ricochet : MonoBehaviour
         if (other.CompareTag("Kill"))
         {
             obj = other.gameObject;
-
+            audiosource.Play();
 
             ProjectileScript pS = obj.GetComponent<ProjectileScript>();
             if (pS != null)
