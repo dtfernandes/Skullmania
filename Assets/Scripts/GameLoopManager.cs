@@ -16,6 +16,9 @@ public class GameLoopManager : MonoBehaviour
     [SerializeField] private TextMeshPro _timerDisplay;
     [SerializeField] private GameObject _player;
 
+    [SerializeField] private GameObject _gameWinText; 
+     [SerializeField] private GameObject _gameLoseText; 
+
 
     private float _currentTime;
     private float _endTime;
@@ -73,6 +76,7 @@ public class GameLoopManager : MonoBehaviour
     {
         OnEndGame?.Invoke();
         _endGameUI.Activate(false);
+        _gameLoseText.SetActive(true);
         _started = false;
     }
 
@@ -82,6 +86,8 @@ public class GameLoopManager : MonoBehaviour
         _endGameUI.Deactivate();
         OnRestart?.Invoke();
         _started = true;
+        _gameWinText.SetActive(false);
+        _gameLoseText.SetActive(false);
     }
 
     public void MainMenu()
@@ -94,6 +100,7 @@ public class GameLoopManager : MonoBehaviour
     private void WinGame()
     {
         _spawner.Stop();
+        _gameWinText.SetActive(true);
         OnEndGame?.Invoke();
         PlayerPrefs.SetInt(_gameType == GameTypeEnum.Sword ?
                             "Sword" : _gameType == GameTypeEnum.Shield ?
