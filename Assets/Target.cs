@@ -7,7 +7,7 @@ public class Target : MonoBehaviour
 {
     [SerializeField]
     private float width, height;
-    
+
     public float Width => width;
     public float Height => height;
 
@@ -18,6 +18,8 @@ public class Target : MonoBehaviour
 
     [SerializeField]
     private GameObject gameOver;
+    [SerializeField]
+    private GameLoopManager gameLoop;
     [SerializeField]
     private Spawner spawner;
     [SerializeField]
@@ -37,9 +39,9 @@ public class Target : MonoBehaviour
             soundEffect.Play();
             //lives[livesNumb].SetActive(false);
 
-            if(livesNumb == 0)
+            if (livesNumb == 0)
             {
-                Die();  
+                Die();
             }
         }
     }
@@ -47,12 +49,13 @@ public class Target : MonoBehaviour
     private void Die()
     {
         gameOver.SetActive(true);
+        gameLoop.GameOver();
         spawner.Stop();
         timer.SetActive(false);
     }
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireCube(transform.position, new Vector3(width,height,0.1f));
+        Gizmos.DrawWireCube(transform.position, new Vector3(width, height, 0.1f));
     }
 }

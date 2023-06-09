@@ -1201,6 +1201,7 @@ MonoBehaviour:
   - {fileID: 479180302}
   - {fileID: 182154736}
   gameOver: {fileID: 1347480157}
+  gameLoop: {fileID: 2348410530313423925}
   spawner: {fileID: 1388262774}
   timer: {fileID: 1474167747}
 --- !u!4 &288562745
@@ -7245,6 +7246,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameLoopManager
       objectReference: {fileID: 0}
+    - target: {fileID: 1015879241882924617, guid: df59aee9d16340e4db401eaaabec55f0,
+        type: 3}
+      propertyPath: _spawner
+      value: 
+      objectReference: {fileID: 1388262774}
     - target: {fileID: 1015879241882924617, guid: df59aee9d16340e4db401eaaabec55f0,
         type: 3}
       propertyPath: _endGameUI

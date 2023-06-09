@@ -9,11 +9,11 @@ public class GameLoopManager : MonoBehaviour
     [SerializeField] private GameConfig_SO _gameConfig;
     [SerializeField] private EndGameUI _endGameUI;
     [SerializeField] private GameTypeEnum _gameType;
-
+    [SerializeField] private Spawner _spawner;
     [SerializeField] private TextMeshPro _timerDisplay;
 
-    public float _currentTime;
-    public float _endTime;
+    private float _currentTime;
+    private float _endTime;
     private bool _started;
 
     public UnityEvent OnEndGame;
@@ -65,6 +65,7 @@ public class GameLoopManager : MonoBehaviour
     {
         OnEndGame?.Invoke();
         _endGameUI.Activate(false);
+        _started = false;
     }
 
     public void Restart()
@@ -72,6 +73,7 @@ public class GameLoopManager : MonoBehaviour
         _currentTime = 0.0f;
         _endGameUI.Deactivate();
         OnRestart?.Invoke();
+        _started = true;
     }
 
     public void MainMenu()
@@ -83,11 +85,13 @@ public class GameLoopManager : MonoBehaviour
     #region PrivateMethods
     private void WinGame()
     {
+        _spawner.Stop();
         OnEndGame?.Invoke();
         PlayerPrefs.SetInt(_gameType == GameTypeEnum.Sword ?
                             "Sword" : _gameType == GameTypeEnum.Shield ?
                             "Shield" : "Magic", 1);
         _endGameUI.Activate(true);
+        _started = false;
     }
     #endregion
 }
